@@ -1,4 +1,5 @@
 #分布式版本控制系统 Git ----https://git-scm.com/
+
 ##一. 初始化(init)，添加(add)到暂存区(stage)，提交(commit)到版本库(master)
 - 初始化一个Git仓库，使用 git init 命令。
 
