@@ -1,3 +1,6 @@
-数据库文件（MySQL）的建库及初始插入语句 在DATABASE 文件夹中
-PROJECT 中的 CHAT 文件夹 即为全部工程
-如您有任何建议或意见可反馈 gmail ： X10090916@gmail.com
+初始化一个Git仓库，使用 git init 命令。
+
+添加文件到Git仓库，分两步：
+
+	1.使用命令 git add <file>，注意，可反复多次使用，添加多个文件；
+	2.使用命令 git commit -m <message> ，完成。
