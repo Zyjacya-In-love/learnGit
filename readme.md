@@ -34,12 +34,13 @@ $ git log --pretty=oneline --abbrev-commit （更清晰）
 - 一般情况下，你通常直接在文件管理器中把没用的文件删了，或者用rm命令删了：$ rm test.txt
 
 - 现在你有两个选择，
- 1. 一是确实要从版本库中删除该文件，那就用命令 git rm 删掉，并且git commit：
-$ git rm test.txt 
+
+	1. 一是确实要从版本库中删除该文件，那就用命令 git rm 删掉，并且git commit：
+$ git rm test.txt
 $ git commit -m "remove test.txt"
 现在，文件就从版本库中被删除了。
 
- 2. 另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
+	2. 另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
 $ git checkout -- test.txt
 git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
 
@@ -50,6 +51,10 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 
 3. 此后，每次本地提交后，只要有必要，就可以使用命令 git push origin master 推送最新修改；
 
+- **补充：**
+	- 1.删除远程库(origin) $ git remote rm origin
+	- 2.查看远程库信息： $ git remote -v
+
 -- 分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
 
 ## 七. 克隆(clone)
@@ -57,8 +62,8 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 
 - Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。
 
-	1. ssh $ git clone git@github.com:Zyjacya-In-love/Gitskill.git 
-	2. https $ git remote add origin https://github.com/Zyjacya-In-love/learnGit.git 
+	1. ssh $ git clone git@github.com:Zyjacya-In-love/Gitskill.git
+	2. https $ git remote add origin https://github.com/Zyjacya-In-love/learnGit.git
 
 ## 八. 分支(branch)
 
@@ -107,22 +112,22 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
  - 恢复并删除 ： $ git stash pop
 
 ## 十二. 多人协作
-1. 另一个电脑远程 clone 参与协作 
-	
+1. 另一个电脑远程 clone 参与协作
+
 	(1) 查看远程库信息，使用 git remote -v；会显示可以 抓取 和 推送 的 origin 的地址。如果没有推送权限，就看不到push的地址。要把 SSH Key 添加到 GitHub
-	
+
 	(2) 从远程库 clone 时，默认情况下，只能看到本地的 master 分支。要在 dev 分支上开发，就必须创建远程 origin 的 dev 分支到本地 $ git checkout -b dev origin/dev  ，本地和远程分支的名称最好一致；
 
 2. 多人协作下的推送(push)
-	
+
 	(1) 首先，可以试图用 git push origin <branch-name> 推送自己的修改；
-	
+
 	(2) 如果推送失败，则因为远程分支比你的本地更新，需要先用 git pull 抓取远程的新提交 并 试图合并；
-	
+
 	(3) 如果 git pull 提示 no tracking information ，则说明本地分支和远程分支的链接关系没有创建，用命令 git branch --set-upstream-to <branch-name> origin/<branch-name>
-	
+
 	(4) 如果合并有冲突，则解决冲突，并在本地提交；
-	
+
 	(5) 没有冲突或者解决掉冲突后，再用 git push origin <branch-name> 推送就能成功！
 
 ## 十三. 变基(rebase)
@@ -147,7 +152,7 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 
 - 命令 git tag -d <tagname> 可以删除一个本地标签；
 
-- 删除一个远程标签 ： 先从本地删除，再远程删除， 命令 git push origin :refs/tags/<tagname> 
+- 删除一个远程标签 ： 先从本地删除，再远程删除， 命令 git push origin :refs/tags/<tagname>
 
 ## 十五. 忽略文件
 - 忽略某些文件时，需要编写 .gitignore 文件；
@@ -160,11 +165,11 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 
 ## 十六. 配置别名
 - **eg :** $ git config --global alias.st status
-- **目前的别名 ：** 
-		
+- **目前的别名 ：**
+
 	> st = status
-	> 
-	> co = checkout 
+	>
+	> co = checkout
 	>
 	>	ci = commit (提交)
 	>
@@ -177,3 +182,16 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 	>	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" (分支合并图)
 
 - **PS :** 当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中， 修改即可
+
+----
+####日后谈：
+## 十七. 补充
+- 生成 sshkey $ ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
+- 查看 sshkey $ cat ~/.ssh/id_rsa.pub
+
+## 十八. 错误解决
+- git warning: LF will be replaced by CRLF in 解决办法 $ git config core.autocrlf false
+- 修改单个文件默认大小 git config --global http.postBuffer 524288000 (500M)
+
+
+
