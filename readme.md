@@ -37,7 +37,7 @@ $ git log --pretty=oneline --abbrev-commit （更清晰）
 
 	1. 一是确实要从版本库中删除该文件，那就用命令 git rm 删掉，并且git commit：
 $ git rm test.txt
-$ git commit -m "remove test.txt"
+\$ git commit -m "remove test.txt"
 现在，文件就从版本库中被删除了。
 
 	2. 另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
@@ -184,7 +184,7 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 - **PS :** 当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中， 修改即可
 
 ----
-####日后谈：
+#### 日后谈：
 ## 十七. 补充
 - 生成 sshkey $ ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
 - 查看 sshkey $ cat ~/.ssh/id_rsa.pub
