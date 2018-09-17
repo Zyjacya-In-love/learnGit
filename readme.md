@@ -234,7 +234,7 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 
 	原格式是 https：//github.com/younghz/Markdown/**blob**/master/Res/Aaron_Swartz.jpg
 
-	换成 !\[Aaron Swartz](https://github.com/younghz/Markdown/**raw**/master/Res/Aaron_Swartz.jpg)
+	换成 !\[Aaron Swartz](https : //github.com/younghz/Markdown/**raw**/master/Res/Aaron_Swartz.jpg)
 
 <a id="--解决github数学公式显示异常-chrome-插件-github-with-mathjax-插件"></a>
 
