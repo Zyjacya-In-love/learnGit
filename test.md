@@ -1,7 +1,6 @@
 # 机器学习-如何在github上写数学公式
-<img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
 
-居中格式: $$xxx$$
+居中格式: $xxx$
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 靠左格式: \\(xxx\\)
 \\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
