@@ -1,4 +1,27 @@
 # 分布式版本控制系统 Git ----https://git-scm.com/
+<!-- MarkdownTOC -->
+
+- 一. 初始化\(init\)，添加\(add\)到暂存区\(stage\)，提交\(commit\)到版本库\(master\)
+- 二. 工作区，版本库 状态\(status\)，和文件不同\(diff\)
+- 三. 在版本之间转换\(reset\)， 历史提交记录，命令
+- 四. 丢弃修改的三种情况
+- 五. 删除\(rm\)
+- 六. github关联\(remote\)， 推送\(push\)
+- 七. 克隆\(clone\)
+- 八. 分支\(branch\)
+- 九. 分支冲突
+- 十. 舍弃快进，让历史记住 "分支" ，一眼看出曾做过合并
+- 十一. bug 修复，工作现场保存\(stash\)
+- 十二. 多人协作
+- 十三. 变基\(rebase\)
+- 十四. 标签\(tag\)
+- 十五. 忽略文件
+- 十六. 配置别名
+	- 后日谈：
+- 十七. 补充
+- 十八. 错误解决
+
+<!-- /MarkdownTOC -->
 
 ## 一. 初始化(init)，添加(add)到暂存区(stage)，提交(commit)到版本库(master)
 - 初始化一个Git仓库，使用 git init 命令。
@@ -184,7 +207,7 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 - **PS :** 当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中， 修改即可
 
 ----
-#### 日后谈：
+#### 后日谈：
 ## 十七. 补充
 - 生成 sshkey $ ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
 - 查看 sshkey $ cat ~/.ssh/id_rsa.pub
