@@ -230,6 +230,16 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 ## 十七. 补充
 - 生成 sshkey $ ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
 - 查看 sshkey $ cat ~/.ssh/id_rsa.pub
+- github 添加图片 url 形式
+
+	原格式是 https：//github.com/younghz/Markdown/**blob**/master/Res/Aaron_Swartz.jpg
+
+	换成 !\[Aaron Swartz](https://github.com/younghz/Markdown/**raw**/master/Res/Aaron_Swartz.jpg)
+
+<a id="--解决github数学公式显示异常-chrome-插件-github-with-mathjax-插件"></a>
+
+- 解决github数学公式显示异常 chrome 插件 [GitHub with MathJax 插件](https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima)
+
 
 <a id="十八-错误解决"></a>
 ## 十八. 错误解决
