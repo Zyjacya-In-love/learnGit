@@ -1,0 +1,32 @@
+# 汇编期末
+
+## 8254
+```x86asm
+CODE SEGMENT
+    ASSUME CS:CODE
+START:
+    MOV DX,0E00CH
+    MOV AL,00110100B
+    OUT DX,AL
+
+    MOV AX,18432
+    MOV DX,0E000H
+    OUT DX,AL
+    MOV AL,AH
+    OUT DX,AL
+
+
+    MOV DX,0E00CH
+    MOV AL,01110110B
+    OUT DX,AL
+
+    MOV AX,100
+    MOV DX,0E004H
+    OUT DX,AL
+    MOV AL,AH
+    OUT DX,AL
+    MOV AH,4CH
+    INT 21H
+CODE ENDS
+    END START
+```
