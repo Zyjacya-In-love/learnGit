@@ -240,7 +240,7 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 
 - 解决github数学公式显示异常 chrome 插件 [GitHub with MathJax 插件](https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima)
 - github 下载慢解决办法
-    1. **（推荐）**使用 *Shadowsocks* 代理，默认代理端口为 **1080** ，配置好代理之后去终端输入 **git** 配置命令
+    1. **（推荐）** 使用 *Shadowsocks* 代理，默认代理端口为 **1080** ，配置好代理之后去终端输入 **git** 配置命令
 
         ```
         git config --global http.proxy socks5://127.0.0.1:1080
