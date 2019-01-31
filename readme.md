@@ -17,7 +17,7 @@
 1. [十四. 标签\(tag\)](#十四-标签tag)
 1. [十五. 忽略文件](#十五-忽略文件)
 1. [十六. 配置别名](#十六-配置别名)
-	1. [后日谈：](#后日谈：)
+    1. [后日谈：](#后日谈：)
 1. [十七. 补充](#十七-补充)
 1. [十八. 错误解决](#十八-错误解决)
 1. [十九. 一般流程](#十九-一般流程)
@@ -239,6 +239,35 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 <a id="--解决github数学公式显示异常-chrome-插件-github-with-mathjax-插件"></a>
 
 - 解决github数学公式显示异常 chrome 插件 [GitHub with MathJax 插件](https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima)
+- github 下载慢解决办法
+    1. **（推荐）**使用 *Shadowsocks* 代理，默认代理端口为 **1080** ，配置好代理之后去终端输入 **git** 配置命令
+
+        ```
+        git config --global http.proxy socks5://127.0.0.1:1080
+        ```
+
+        上面的命令是给 **git** 设置全局代理，如果不希望国内 **git** 库也走代理，而是只需要 **github** 上的代码库走代理
+
+        ```
+        git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
+        ```
+
+        如果要 **恢复/移除** 上面设置的 **git** 代理
+
+        ```
+        git config --global --unset http.proxy
+        ```
+        或者
+        ```
+        git config --global --unset http.https://github.com.proxy
+        ```
+
+        如果**不确定**，查看全局配置  ```git config --global --list```
+
+    2. 使用码云（[https://gitee.com/](https://gitee.com/)）从 **github** 上导入
+        1. fork 想要下载的项目
+        2. 点击码云右上角的 + 号，选择从 Github 导入仓库
+        3. 从码云上下载
 
 
 <a id="十八-错误解决"></a>
